@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.text {
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
 .explore::before {
     content: "";
     position: absolute;
@@ -39,116 +46,26 @@
     visibility: visible;
 }
 
-.links a.active {
-    border-bottom: 4px solid white;
+.links a.active,
+.planets div.active {
+    border-bottom: 2px solid white;
 }
 
-.links a:not(.active):hover {
-    border-bottom: 4px solid rgba(255, 255, 255, 0.25);
-    /* border-bottom: 4px solid;
-    animation-name: lightup;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1; */
+.links a:not(.active):hover,
+.planets div:not(.active):hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
 }
 
-@keyframes lightup {
+@keyframes float {
     0% {
-        border-color: transparent;
-    }
-
-    15% {
-        border-color: white;
-    }
-
-    30% {
-        border-color: transparent;
-    }
-
-    40% {
-        border-color: white;
+        transform: translateY(5px);
     }
 
     50% {
-        border-color: transparent;
-    }
-
-    55% {
-        border-color: white;
-    }
-
-    60% {
-        border-color: transparent;
-    }
-
-    65% {
-        border-color: white;
-    }
-
-    /* 70% {
-        border-color: transparent;
-    }
-
-    75% {
-        border-color: white;
-    } */
-
-    80% {
-        border-color: transparent;
-    }
-
-    85% {
-        border-color: white;
-    }
-
-    87% {
-        border-color: transparent;
-    }
-
-    89% {
-        border-color: white;
-    }
-
-    90% {
-        border-color: transparent;
-    }
-
-    91% {
-        border-color: white;
-    }
-
-    92% {
-        border-color: transparent;
-    }
-
-    93% {
-        border-color: white;
-    }
-
-    94% {
-        border-color: transparent;
-    }
-
-    95% {
-        border-color: white;
-    }
-
-    96% {
-        border-color: transparent;
-    }
-
-    97% {
-        border-color: white;
-    }
-
-    98% {
-        border-color: white;
-    }
-
-    99% {
-        border-color: white;
+        transform: translateY(-5px);
     }
 
     100% {
-        border-color: transparent;
+        transform: translateY(5px);
     }
 }

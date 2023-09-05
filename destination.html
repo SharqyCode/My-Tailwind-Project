@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="font-barlow text-sm md:text-base text-white">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+        <!-- CSS Styling -->
+        <link rel="stylesheet" href="./CSS/index.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+        <title>Space</title>
+    </head>
+    <body class="h-screen bg-dest-mobile bg-no-repeat bg-cover md:bg-dest-tablet lg:bg-dest-desktop">
+        <nav class="mx-auto flex relative justify-between items-center pl-8 pt-6">
+            <img src="./assets/shared/logo.svg" alt="" class="bg-white rounded-full w-10 aspect-square">
+            <img src="./assets/shared/icon-hamburger.svg" alt="" class="md:hidden mr-6">
+            <div class="h-px w-1/3 bg-greyObj absolute top-20 z-10 hidden left-28 lg:block"></div>
+            <div class="links relative items-center justify-around space-x-4 text-white text-sm backdrop-blur-md backdrop-brightness-110 font-barlowCond tracking-nav px-6 w-3/5 hidden md:flex lg:space-x-12 lg:text-base">
+                <a href="./index.html" class="py-10">
+                    <span class="font-bold">00</span>
+                    HOME
+                </a>
+                <a href="./destination.html" class="py-10 active">
+                    <span class="font-bold">01</span>
+                    DESTINATION
+                </a>
+                <a href="./crew.html" class="py-10">
+                    <span class="font-bold">02</span>
+                    CREW
+                </a>
+                <a href="./tech.html" class="py-10">
+                    <span class="font-bold">03</span>
+                    TECHNOLOGY
+                </a>
+            </div>
+        </nav>
+        <main class="container mt-10 mx-auto lg:flex-row">
+            <h2 class="font-barlowCond text-white text-center tracking-h5 sm:text-start md:text-xl lg:text-h5 lg:mb-16">
+                <span class="text-greyObj">01</span>
+                PICK YOUR DESTINATION
+            </h2>
+            <div class="content flex flex-col lg:flex-row">
+                <div class="imageBox flex justify-center mt-8 mb-8 lg:w-1/2">
+                    <img src="./assets/destination/image-moon.webp" alt="" class="w-44 sm:w-80 lg:w-96">
+                </div>
+                <div class="info w-96 mx-auto sm:w-2/3 lg:w-1/2">
+                    <div class="planets flex justify-center items-center text-white text-sm font-barlowCond space-x-8 mb-6 tracking-nav sm:mb-12 lg:justify-start">
+                        <div class="py-2 active cursor-pointer">MOON</div>
+                        <div class="py-2 cursor-pointer">MARS</div>
+                        <div class="py-2 cursor-pointer">EUROPA</div>
+                        <div class="py-2 cursor-pointer">TITAN</div>
+                    </div>
+                    <h1 class="font-bf text-6xl text-center text-white lg:text-start lg:text-h2">MOON</h1>
+                    <p class="text-bluishFont text-center leading-10 border-b border-greyLine pb-6 mb-6 lg:text-start lg:w-96">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                    <div class="stats flex flex-col items-center text-center space-y-8 sm:flex-row sm:justify-center sm:gap-x-28 sm:space-y-0 lg:text-start lg:justify-start">
+                        <div class="distance flex flex-col space-y-3">
+                            <span class="text-bluishFont text-sm font-barlowCond tracking-sh2">AVG. DISTANCE</span>
+                            <span class="text-3xl font-bf">384,400 km</span>
+                        </div>
+                        <div class="time flex flex-col space-y-3">
+                            <span class="text-bluishFont text-sm font-barlowCond tracking-sh2">EST. TRAVEL TIME</span>
+                            <span class="text-3xl font-bf">3 DAYS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="scripts/navlinks.js"></script>
+    </body>
+</html>
