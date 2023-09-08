@@ -4,6 +4,11 @@ module.exports = {
   content: ['./index.html', './destination.html'],
   theme: {
     extend: {
+      width: {
+        destSm: "10.625rem",
+        destMd: "18.75rem",
+        destLg: "27.75rem",
+      },
 
       colors: {
         blackFont: "#0B0D17",
