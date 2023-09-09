@@ -6,16 +6,15 @@ let techDesc = document.querySelector("#techDesc");
 getTechies();
 //"./assets/technology/image-launch-vehicle-landscape.jpg"
 async function getTechies() {
-    let response = await fetch("../data/data.json");
+    let response = await fetch("../data.json");
     let data = (await response.json()).technology;
     console.log(data);
     if (window.matchMedia("(min-width: 1024px)").matches) {
         techImg.src = data[0].images.portrait;
     } else {
         techImg.src = data[0].images.landscape;
-
-        displayTechInfo(data);
     }
+    displayTechInfo(data);
 
     function displayTechInfo(array) {
         techies.forEach(techie => {
