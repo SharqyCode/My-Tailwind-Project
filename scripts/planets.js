@@ -13,9 +13,8 @@ async function getPlanets() {
     console.log(data);
     displayDestInfo(data);
 }
-
 function displayDestInfo(array) {
-    members.forEach(planet => {
+    planets.forEach(planet => {
         planet.addEventListener("click", () => {
             if (!planet.classList.contains("active")) {
                 let cur = document.querySelector(".planet.active");
@@ -26,8 +25,8 @@ function displayDestInfo(array) {
             destImg.src = array[planetIndex].images.png;
             destTitle.innerHTML = array[planetIndex].name.toUpperCase();
             destDesc.innerHTML = array[planetIndex].description;
-            destDist.innerHTML = array[planetIndex].distance;
-            destTime.innerHTML = array[planetIndex].travel;
+            destDist.innerHTML = array[planetIndex].distance.toUpperCase();
+            destTime.innerHTML = array[planetIndex].travel.toUpperCase();
         })
     })
 }
