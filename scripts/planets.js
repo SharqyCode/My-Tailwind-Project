@@ -15,7 +15,7 @@ async function getPlanets() {
 }
 
 function displayDestInfo(array) {
-    planets.forEach(planet => {
+    members.forEach(planet => {
         planet.addEventListener("click", () => {
             if (!planet.classList.contains("active")) {
                 let cur = document.querySelector(".planet.active");

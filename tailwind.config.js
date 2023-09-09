@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ['./index.html', './destination.html'],
+  content: ['./index.html', './destination.html', './crew.html'],
   theme: {
     extend: {
       width: {
@@ -48,7 +48,7 @@ module.exports = {
         'home-tablet': "url('../assets/home/background-home-tablet.jpg')",
         'home-desktop': "url('../assets/home/background-home-desktop.jpg')",
 
-        'crew-mobile': "url('../assets/crew/background-crew-mobile.jpg",
+        'crew-mobile': "url('../assets/crew/background-crew-mobile.jpg')",
         'crew-tablet': "url('../assets/crew/background-crew-tablet.jpg')",
         'crew-desktop': "url('../assets/crew/background-crew-desktop.jpg')",
 
