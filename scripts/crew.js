@@ -7,7 +7,7 @@ let crewDesc = document.querySelector("#crewDesc");
 getMembers();
 
 async function getMembers() {
-    let response = await fetch("../data.json");
+    let response = await fetch("./data.json");
     let data = (await response.json()).crew;
     console.log(data);
     displayCrewInfo(data);

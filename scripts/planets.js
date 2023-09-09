@@ -8,7 +8,7 @@ let destTime = document.querySelector("#destTime");
 getPlanets();
 
 async function getPlanets() {
-    let response = await fetch("../data.json");
+    let response = await fetch("./data.json");
     let data = (await response.json()).destinations;
     console.log(data);
     displayDestInfo(data);

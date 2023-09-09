@@ -6,7 +6,7 @@ let techDesc = document.querySelector("#techDesc");
 getTechies();
 //"./assets/technology/image-launch-vehicle-landscape.jpg"
 async function getTechies() {
-    let response = await fetch("../data.json");
+    let response = await fetch("./data.json");
     let data = (await response.json()).technology;
     console.log(data);
     if (window.matchMedia("(min-width: 1024px)").matches) {
