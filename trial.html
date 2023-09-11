@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/index.css">
+        <title>Document</title>
+    </head>
+    <body class="bg-black">
+        <div class="total-wrapper flex flex-col items-center mt-60 mx-auto">
+            <div class="wrapper relative w-36 h-36">
+                <div class="box bg-red-400 w-36 h-36 absolute" data-status="active" data-index="0"></div>
+                <div class="box bg-blue-400 w-36 h-36 absolute" data-status="pending" data-index="1"></div>
+                <div class="box bg-green-400 w-36 h-36 absolute" data-status="pending" data-index="2"></div>
+                <div class="box bg-yellow-400 w-36 h-36 absolute" data-status="pending" data-index="3"></div>
+            </div>
+            <div class="nums flex justify-center gap-x-5 text-white text-3xl">
+                <div class="num w-16 h-16 border-[4px] mt-10 grid place-items-center hover:bg-white hover:text-black cursor-pointer" data-index="0">1</div>
+                <div class="num w-16 h-16 border-[4px] mt-10 grid place-items-center hover:bg-white hover:text-black cursor-pointer" data-index="1">2</div>
+                <div class="num w-16 h-16 border-[4px] mt-10 grid place-items-center hover:bg-white hover:text-black cursor-pointer" data-index="2">3</div>
+                <div class="num w-16 h-16 border-[4px] mt-10 grid place-items-center hover:bg-white hover:text-black cursor-pointer" data-index="3">4</div>
+            </div>
+        </div>
+        <script src="scripts/trials.js"></script>
+    </body>
+</html>

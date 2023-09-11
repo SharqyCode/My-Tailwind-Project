@@ -67,6 +67,30 @@
     }
 }
 
+.planetImg {
+    transition: 300ms;
+}
+
+.planetImg[data-status="pending"] {
+    z-index: -1;
+    transform: scale(0);
+}
+
+.planetImg[data-status="nextLeft"] {
+    transform: translateX(-100%) scale(0);
+    z-index: 2;
+}
+
+.planetImg[data-status="nextRight"] {
+    transform: translateX(100%) scale(0);
+    z-index: 2;
+}
+
+.planetImg[data-status="active"] {
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -80,3 +104,31 @@
         transform: translateY(0px);
     }
 }
+
+
+/* ----------------------------------- */
+.planetImg {
+    transition: 300ms;
+}
+
+.planetImg[data-status="pending"] {
+    z-index: -1;
+    transform: scale(0);
+}
+
+.planetImg[data-status="nextLeft"] {
+    transform: translateX(-100%) scale(0);
+    z-index: 2;
+}
+
+.planetImg[data-status="nextRight"] {
+    transform: translateX(100%) scale(0);
+    z-index: 2;
+}
+
+.planetImg[data-status="active"] {
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+
+/* ----------------------------------- */
