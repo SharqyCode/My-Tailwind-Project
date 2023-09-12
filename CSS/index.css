@@ -658,6 +658,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-\[10\.625rem\] {
+  margin-top: 10.625rem;
+}
+
 .flex {
   display: flex;
 }
@@ -1081,10 +1085,6 @@ video {
   transition-duration: 300ms;
 }
 
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
 .tech.active {
   background-color: white;
   --tw-text-opacity: 1;
@@ -1187,26 +1187,26 @@ video {
 
 /* ----------------------------------- */
 
-.planetImg {
+.box {
   transition: 300ms;
 }
 
-.planetImg[data-status="pending"] {
+.box[data-status="pending"] {
   z-index: -1;
   transform: scale(0);
 }
 
-.planetImg[data-status="nextLeft"] {
+.box[data-status="nextLeft"] {
   transform: translateX(-100%) scale(0);
   z-index: 2;
 }
 
-.planetImg[data-status="nextRight"] {
+.box[data-status="nextRight"] {
   transform: translateX(100%) scale(0);
   z-index: 2;
 }
 
-.planetImg[data-status="active"] {
+.box[data-status="active"] {
   transform: translateX(0) scale(1);
   z-index: 1;
 }
@@ -1287,6 +1287,10 @@ video {
 
   .sm\:mb-12 {
     margin-bottom: 3rem;
+  }
+
+  .sm\:mt-\[18\.75rem\] {
+    margin-top: 18.75rem;
   }
 
   .sm\:w-16 {
@@ -1470,6 +1474,10 @@ video {
 
   .lg\:mb-16 {
     margin-bottom: 4rem;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:mt-24 {

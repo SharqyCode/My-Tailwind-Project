@@ -57,7 +57,7 @@ async function getPlanets() {
         planetImg.dataset.index = planet.dataset.index;
         planetImg.dataset.status = "pending";
         planetImg.src = data[+planetImg.dataset.index].images.png;
-        planetImg.classList.add("planetImg", "Img-destSm", "sm:w-destMd", "lg:w-destLg", "duration-300", "absolute");
+        planetImg.classList.add("w-destSm", "lg:w-destLg", "planetImg", "sm:w-destMd", "lg:w-destLg", "duration-300", "absolute");
         if (planetImg.dataset.index == 0) {
             planetImg.dataset.status = "active";
         }
@@ -67,10 +67,3 @@ async function getPlanets() {
 }
 
 getPlanets();
-
-{/* <img
-    id="curDestImg"
-    src="./assets/destination/image-moon.png"
-    alt=""
-    class=" curDestImgw-destSm sm:w-destMd lg:w-destLg duration-300 ease-out"
-> */}
