@@ -1,5 +1,3 @@
-let planets = document.querySelectorAll(".planet");
-// let destImg = document.querySelector("#destImg");
 let imageBox = document.querySelector(".imageBox");
 let curDestImg = document.querySelector("#curDestImg");
 let prevDestImg = document.querySelector("#prevDestImg");
@@ -9,8 +7,42 @@ let destDesc = document.querySelector("#destDesc");
 let destDist = document.querySelector("#destDist");
 let destTime = document.querySelector("#destTime");
 
+let destSelectorGroup = document.querySelector("#destSelectorGroup");
 
-function displayDestInfo(array) {
+function createInfoHolders(array) {
+    // Create dest selector for each dest in JSON file
+    for (let i = 0; i < array.length; i++) {
+        let destSelector = document.createElement("div");
+        destSelector.classList.add("planet", "py-2", "cursor-pointer", "mx-7");
+        destSelector.dataset.index = i;
+        if (i == 0)
+            destSelector.classList.add("active");
+        destSelector.innerHTML = array[i].name.toUpperCase();
+        destSelectorGroup.appendChild(destSelector);
+    }
+    let planets = document.querySelectorAll(".planet");
+
+    // Create dest image for each dest in JSON file
+    planets.forEach(planet => {
+        let planetImg = document.createElement("img");
+        planetImg.dataset.index = planet.dataset.index;
+        planetImg.dataset.status = "pending";
+        planetImg.src = array[+planetImg.dataset.index].images.png;
+        planetImg.classList.add("w-destSm", "lg:w-destLg", "planetImg", "sm:w-destMd", "lg:w-destLg", "duration-300", "absolute");
+        if (planetImg.dataset.index == 0) {
+            planetImg.dataset.status = "active";
+        }
+        imageBox.appendChild(planetImg);
+    })
+    destTitle.innerHTML = array[0].name.toUpperCase();
+    destDesc.innerHTML = array[0].description;
+    destDist.innerHTML = array[0].distance.toUpperCase();
+    destTime.innerHTML = array[0].travel.toUpperCase();
+    selectDest(array);
+}
+
+function selectDest(array) {
+    planets = document.querySelectorAll(".planet");
     planets.forEach(planet => {
         planet.addEventListener("click", () => {
             if (!planet.classList.contains("active")) {
@@ -51,19 +83,7 @@ function displayDestInfo(array) {
 async function getPlanets() {
     let response = await fetch("./data.json");
     let data = (await response.json()).destinations;
-    console.log(data);
-    planets.forEach(planet => {
-        let planetImg = document.createElement("img");
-        planetImg.dataset.index = planet.dataset.index;
-        planetImg.dataset.status = "pending";
-        planetImg.src = data[+planetImg.dataset.index].images.png;
-        planetImg.classList.add("w-destSm", "lg:w-destLg", "planetImg", "sm:w-destMd", "lg:w-destLg", "duration-300", "absolute");
-        if (planetImg.dataset.index == 0) {
-            planetImg.dataset.status = "active";
-        }
-        imageBox.appendChild(planetImg);
-    })
-    displayDestInfo(data);
+    createInfoHolders(data);
 }
 
 getPlanets();

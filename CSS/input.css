@@ -67,6 +67,10 @@
     }
 }
 
+#destInfo {
+    flex: 1 0 50%;
+}
+
 .planetImg {
     transition: 300ms;
 }
