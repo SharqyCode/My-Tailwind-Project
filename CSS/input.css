@@ -11,6 +11,15 @@
     animation-timing-function: ease-in-out;
 }
 
+#menu {
+    transition: transform 300ms, filter 600ms;
+}
+
+#menu:not(.active) {
+    transform: translateX(100%);
+    filter: blur(100px);
+}
+
 .explore::before {
     content: "";
     position: absolute;
