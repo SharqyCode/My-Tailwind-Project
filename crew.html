@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
         <title>Space</title>
     </head>
-    <body class="relative h-screen bg-crew-mobile bg-no-repeat bg-cover md:bg-crew-tablet lg:bg-crew-desktop lg:overflow-y-hidden">
+    <body class="relative h-screen bg-crew-mobile bg-no-repeat bg-cover md:bg-crew-tablet lg:bg-crew-desktop">
         <nav class="mx-auto flex relative justify-between items-center pl-8 pt-6">
             <img src="./assets/shared/logo.svg" alt="" class="bg-white rounded-full w-10 aspect-square">
             <img
@@ -60,32 +60,27 @@
                 TECHNOLOGY
             </a>
         </div>
-        <main class="container mt-10 mx-auto lg:flex-row px-5">
+        <main class="container mt-10 mx-auto lg:flex-row px-5 pb-20">
             <h2 class="font-barlowCond text-white text-center tracking-h5 mb-10 sm:text-start sm:pl-6 md:text-xl lg:text-h5 lg:mb-16 lg:pl-0">
                 <span class="text-greyObj">02</span>
                 MEET YOUR CREW
             </h2>
             <div class="content flex flex-col sm:flex-col-reverse">
-                <div class="imageBox border-b-2 w-full border-greyLine flex justify-center sm:border-0 sm:absolute sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 lg:w-1/2 lg:left-3/4">
+                <!-- <div class="imageBox border-b-2 w-full border-greyLine flex justify-center sm:border-0 sm:absolute sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 lg:w-1/2 lg:left-3/4">
                     <img
                         id="crewImg"
                         src="./assets/crew/image-douglas-hurley.png"
                         alt=""
                         class="w-1/2 lg:w-1/2"
                     >
-                </div>
-                <div class="info flex flex-col sm:flex-col-reverse  lg:w-1/2 lg:mt-24">
-                    <div class="switch flex justify-center space-x-4 my-10 lg:justify-start justify-self-end">
-                        <div data-index="0" class="crewMem w-3 aspect-square bg-greyObj rounded-full cursor-pointer active"></div>
-                        <div data-index="1" class="crewMem w-3 aspect-square bg-greyObj rounded-full cursor-pointer"></div>
-                        <div data-index="2" class="crewMem w-3 aspect-square bg-greyObj rounded-full cursor-pointer"></div>
-                        <div data-index="3" class="crewMem w-3 aspect-square bg-greyObj rounded-full cursor-pointer"></div>
-                    </div>
+                </div> -->
+                <div class="info flex flex-col mt-[250px] sm:mt-0 sm:flex-col-reverse  lg:w-1/2 lg:mt-24">
+                    <div id="crewSelectorGroup" class="flex justify-center space-x-4 my-10 lg:justify-start justify-self-end"></div>
                     <div class="text-center font-bf sm:order-1 lg:text-start">
                         <h2 id="crewRole" class="text-greyObj text-xl sm:text-3xl">COMMANDER</h2>
                         <h1 id="crewName" class="text-3xl mt-2 sm:text-5xl">DOUGLAS HURLEY</h1>
                     </div>
-                    <p id="crewDesc" class="text-center text-bluishFont mt-4 sm:px-28 pb-5 sm:pb-0 lg:text-start lg:pl-0">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+                    <p id="crewDesc" class="text-center text-bluishFont mt-4 sm:px-28 pb-5 leading-9 sm:leading-9 md:leading-9 lg:leading-9 sm:pb-0 lg:text-start lg:pl-0">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
                 </div>
             </div>
         </main>

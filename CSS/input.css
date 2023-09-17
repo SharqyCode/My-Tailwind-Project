@@ -95,6 +95,47 @@
     z-index: 1;
 }
 
+.crewImageBox {
+    transition: 300ms;
+}
+
+.crewImageBox[data-status="pending"] {
+    opacity: 0;
+    z-index: -1;
+}
+
+.crewImageBox[data-status="nextLeft"] {
+    opacity: 0;
+    z-index: 2;
+}
+
+.crewImageBox[data-status="nextRight"] {
+    opacity: 0;
+    z-index: 2;
+}
+
+.crewImageBox[data-status="active"] {
+    opacity: 1;
+    z-index: 1;
+}
+
+.techImageBox {
+    transition: 800ms;
+}
+
+.techImageBox[data-status="pending"] {
+    transform: translateY(-300%);
+    opacity: 0;
+    z-index: -1;
+}
+
+.techImageBox[data-status="active"] {
+    z-index: 1;
+}
+
+
+
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -111,7 +152,7 @@
 
 
 /* ----------------------------------- */
-.box {
+/* .box {
     transition: 300ms;
 }
 
@@ -128,6 +169,45 @@
 .box[data-status="nextRight"] {
     transform: translateX(100%) scale(0);
     z-index: 2;
+}
+
+.box[data-status="active"] {
+    transform: translateX(0) scale(1);
+    z-index: 1;
+} */
+
+/* .box {
+    transition: 300ms;
+}
+
+.box[data-status="pending"] {
+    opacity: 0;
+    z-index: -1;
+}
+
+.box[data-status="nextLeft"] {
+    opacity: 0;
+    z-index: 2;
+}
+
+.box[data-status="nextRight"] {
+    opacity: 0;
+    z-index: 2;
+}
+
+.box[data-status="active"] {
+    opacity: 1;
+    z-index: 1;
+} */
+
+.box {
+    transition: 300ms;
+}
+
+.box[data-status="pending"] {
+    transform: translateY(-300%) scale(0.8);
+    opacity: 0;
+    z-index: -1;
 }
 
 .box[data-status="active"] {
