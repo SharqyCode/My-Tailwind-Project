@@ -20,6 +20,15 @@
     filter: blur(100px);
 }
 
+.menu-wrapper {
+    z-index: 3;
+}
+
+.menu-wrapper:has(#menu:not(.active)) {
+    z-index: -1;
+    transition-delay: 300ms;
+}
+
 .explore::before {
     content: "";
     position: absolute;

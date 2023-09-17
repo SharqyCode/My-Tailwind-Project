@@ -703,6 +703,10 @@ video {
   height: 9rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-px {
   height: 1px;
 }
@@ -829,6 +833,10 @@ video {
 
 .justify-self-end {
   justify-self: end;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-full {
@@ -977,10 +985,6 @@ video {
 
 .pl-8 {
   padding-left: 2rem;
-}
-
-.pr-32 {
-  padding-right: 8rem;
 }
 
 .pt-36 {
@@ -1132,7 +1136,13 @@ video {
   filter: blur(100px);
 }
 
-#menu.active {
+.menu-wrapper {
+  z-index: 3;
+}
+
+.menu-wrapper:has(#menu:not(.active)) {
+  z-index: -1;
+  transition-delay: 300ms;
 }
 
 .explore::before {
